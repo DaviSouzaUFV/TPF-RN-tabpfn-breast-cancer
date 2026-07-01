@@ -1,0 +1,4 @@
+Configuração,Acurácia (média±dp),AUC (média±dp),F1 (média±dp),Tempo médio/fold (s)
+"TPF-01 (split único, 30 attrs)",0.9825,0.9967,0.9861,2.03
+"TPF-02 CV 10-fold, 30 attrs (sem PCA)",0.9807 ± 0.0123,0.9971 ± 0.0054,0.9847 ± 0.0098,2.30
+"TPF-02 CV 10-fold, 10 attrs (PCA 95%)",0.9701 ± 0.0208,0.9956 ± 0.0055,0.9762 ± 0.0171,2.12

@@ -17,21 +17,19 @@ Reprodução (TPF-01) e aprimoramento (TPF-02) do artigo *TabPFN: A Transformer 
 | TPF-02 (10-fold CV, 30 attrs) | 0,9807 ± 0,0123 | 0,9971 ± 0,0054 | 0,9847 ± 0,0098 | 2,30 |
 | TPF-02 (10-fold CV, PCA 10 attrs) | 0,9701 ± 0,0208 | 0,9956 ± 0,0055 | 0,9762 ± 0,0171 | 2,12 |
 
-Ver o relatório completo (`relatorio/TPF02_Relatorio.pdf`) para discussão detalhada.
+Ver o relatório completo (`TPF02_Relatorio_Davi_de_Souza.pdf`) para discussão detalhada.
 
 ## Estrutura do repositório
 
 ```
 .
-├── notebooks/
-│   └── tpf02_experimento.py     # Script completo (baseline + PCA + 10-fold CV)
-├── resultados/
-│   └── tpf02_resultados_resumo.csv
-├── relatorio/
-│   ├── TPF02_Relatorio.pdf
-│   └── latex/                   # Fonte LaTeX (formato NeurIPS)
-│       ├── main.tex
-│       └── neurips_2024.sty
+├── tpf02_experimento.py                # Script completo (baseline + PCA + 10-fold CV)
+├── tpf02_resultados_resumo.csv         # Tabela comparativa dos resultados
+├── pca_variancia.png                   # Figura: variância explicada acumulada (PCA)
+├── tpf02_comparacao.png                # Figura: acurácia e custo computacional
+├── tpf02_estabilidade_folds.png        # Figura: estabilidade da acurácia entre folds
+├── TPF02_Relatorio_Davi_de_Souza.pdf   # Relatório final (formato NeurIPS)
+├── TPF_Apresentacao_Davi_de_Souza.pptx # Slides da apresentação
 └── README.md
 ```
 
@@ -46,7 +44,7 @@ Ver o relatório completo (`relatorio/TPF02_Relatorio.pdf`) para discussão deta
    ```bash
    hf auth login
    ```
-4. Execute o script `notebooks/tpf02_experimento.py` (pode ser colado célula por célula em um notebook Colab — já está dividido em blocos `# %%`).
+4. Execute o script `tpf02_experimento.py` (pode ser colado célula por célula em um notebook Colab — já está dividido em blocos `# %%`).
 5. O script gera automaticamente:
    - `tpf02_resultados_resumo.csv` — tabela comparativa dos resultados
    - `pca_variancia.png`, `tpf02_comparacao.png`, `tpf02_estabilidade_folds.png` — figuras usadas no relatório
